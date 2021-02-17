@@ -1,0 +1,18 @@
+{
+  "name": "fem-loopstudios",
+  "version": "1.0.0",
+  "description": "front end mentor challenge",
+  "main": "index.js",
+  "dependencies": {
+    "snowpack": "^3.0.11",
+    "@snowpack/plugin-sass": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kevin boyle",
+  "license": "ISC"
+}
