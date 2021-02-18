@@ -1,5 +1,109 @@
-@import "/src/assets/styles/reset";
-@import "/src/assets/styles/type";
-@import "/src/assets/styles/variables";
-@import "/src/assets/styles/helpers";
-@import "/src/assets/styles/mixins";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Variables ------------- */
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$gray-dark: hsl(0, 0%, 55%);
+$gray-v-dark: hsl(0, 0%, 41%);
+
+/* Typography ------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+body {
+  background-color: $black;
+  font-family: "Alata", sans-serif;
+  line-height: 1.8;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+  color: $white;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  color: $black;
+  line-height: 1;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: $white;
+  @media (min-width: 1024px) {
+    font-size: 72px;
+  }
+}
+
+h2 {
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+}
+
+/* Structure ------------- */
+
+.wrapper {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.content-wrapper {
+  background-color: green;
+  padding-top: 64px;
+  height: 650px;
+  max-width: 1440px;
+}
+
+.hero {
+  background-color: red;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero-illy {
+  background-image: url("/src/assets/images/desktop/image-hero.jpg");
+  background-position: center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+}
+
+.hero-block {
+  border: 2px solid $white;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hero-nav {
+  display: flex;
+}
