@@ -73,19 +73,19 @@ h2 {
 
 .content-wrapper {
   background-color: green;
-  padding-top: 64px;
   height: 650px;
   max-width: 1440px;
+  padding-top: 64px;
+  padding-left: 160px;
+  padding-right: 164px;
+  position: relative;
+  width: 100%;
 }
 
 .hero {
   background-color: red;
   display: grid;
-  justify-content: center;
-  align-items: center;
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .hero-illy {
@@ -97,13 +97,35 @@ h2 {
 }
 
 .hero-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 130px;
+}
+
+.hero-shoutout {
   border: 2px solid $white;
+  display: inline-block;
   padding-left: 46px;
-  padding-right: 46px;
   padding-top: 40px;
   padding-bottom: 40px;
+  max-height: 280px;
 }
 
 .hero-nav {
   display: flex;
+  justify-content: flex-end;
+
+  li + li {
+    margin-left: 35px;
+  }
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
 }
