@@ -16,6 +16,14 @@ $black: hsl(0, 0%, 0%);
 $gray-dark: hsl(0, 0%, 55%);
 $gray-v-dark: hsl(0, 0%, 41%);
 
+.is-white {
+  background-color: $white;
+}
+
+.has-dark {
+  color: $black;
+}
+
 /* Typography ------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
@@ -24,6 +32,7 @@ $gray-v-dark: hsl(0, 0%, 41%);
 body {
   background-color: $black;
   font-family: "Alata", sans-serif;
+  color: $white;
   line-height: 1.8;
   font-weight: 400;
 
@@ -62,30 +71,52 @@ h2 {
   }
 }
 
+.btn {
+  border: 2px solid $black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  width: 160px;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
 /* Structure ------------- */
 
 .wrapper {
-  background-color: pink;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
 .content-wrapper {
-  background-color: green;
-  height: 650px;
-  max-width: 1440px;
-  padding-top: 64px;
   padding-left: 160px;
-  padding-right: 164px;
+  padding-right: 160px;
   position: relative;
+  max-width: 1440px;
   width: 100%;
 }
 
-.hero {
-  background-color: red;
+.grid50 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero {
+  display: grid;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .hero-illy {
@@ -96,14 +127,10 @@ h2 {
   min-height: 650px;
 }
 
-.hero-block {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .nav-block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 75px;
   margin-bottom: 130px;
 }
 
@@ -128,4 +155,42 @@ h2 {
 .hero-logo {
   display: flex;
   align-items: center;
+}
+
+.leader-illy {
+  height: auto;
+  width: 730px;
+}
+
+.creations {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.article-list {
+  display: grid;
+  grid-gap: 30px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 256px);
+  }
+}
+
+.article {
+  background-color: cornflowerblue;
+  display: flex;
+  min-height: 240px;
+  width: auto;
+
+  @media (min-width: 1024px) {
+    min-height: 450px;
+  }
+}
+
+.article-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
